@@ -4,14 +4,22 @@
 		<title>ParKENT Administrator</title>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="js/restAPI.js"></script>
 	</head>
 
 	<body>
 		<a href="home.html"><h1><img src="../parkent_logo.jpg" alt="logo"></h1></a>
 		<br>
+		<script src="js/restAPI.js">
+			getSpots();
+		</script>
 		<div class="container">
 			<div>
 				<a href="create_database.html" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Create Database</a>
+			</div>
+			<br>
+			<div>
+				<a href="remove_database.html" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Remove Database</a>
 			</div>
 			<br>
 			<div>
