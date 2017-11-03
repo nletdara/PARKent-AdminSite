@@ -9,16 +9,15 @@ function getSpots() {
     });
   }
 
-function testFunc(){
-	document.write('testing');
+function getAllLots(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    console.log(theUrl);
+    xmlHttp.open( "GET", theUrl , false); 
+    xmlHttp.send(null);
+    var response = xmlHttp.responseText;
+    console.log(response);
+    return xmlHttp.responseText;
 }
 
-function httpGet()
-{
-    console.log('in get function');
-    var theURL = "http://127.0.0.1:5000/allLots";
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
-    xmlHttp.send();
-    //return xmlHttp.responseText;
-}
+
