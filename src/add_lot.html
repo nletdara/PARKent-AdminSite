@@ -8,7 +8,7 @@
 
 	<body>
 		<a href="home.html"><h1><img src="../parkent_logo.jpg" alt="logo"></h1></a>
-		<form class="form-horizontal">
+		<form name="addLotForm" class="form-horizontal">
 			<fieldset class="container">
 
 				<label>Enter the required entities for the parking lot.</label>
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 
-				<a href="#" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-plus"></span> Add Parking Lot</a>
+				<button type="button" onclick="addLot(this.form);" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-plus"></span> Add Parking Lot</button>
 
 			</fieldset>
 		</form>
