@@ -8,3 +8,17 @@ function getSpots() {
         });
     });
   }
+
+function testFunc(){
+	document.write('testing');
+}
+
+function httpGet()
+{
+    console.log('in get function');
+    var theURL = "http://127.0.0.1:5000/allLots";
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
+    xmlHttp.send();
+    //return xmlHttp.responseText;
+}
