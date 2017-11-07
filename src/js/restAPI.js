@@ -10,6 +10,17 @@ function getAllLots(theUrl)
     return xmlHttp.responseText;
 }
 
+function getLots()
+{
+    var xmlHttp = new XMLHttpRequest();
+    var theUrl = "http://127.0.0.1:5000/lots"
+    xmlHttp.open( "GET", theUrl , false);
+    xmlHttp.send(null);
+    var response = xmlHttp.responseText;
+    console.log(response);
+    return xmlHttp.responseText;
+}
+
 function addLot(form) {
     var name = form.location_name.value;
     var cap =  form.total_spaces.value;
