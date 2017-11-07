@@ -25,7 +25,8 @@ function addLot(form) {
     return xmlHttp.responseText;
 }
 
-function dropLot(name) {
+function dropLot(form) {
+    var name = form.sel_rLot.value;
     var xmlHttp = new XMLHttpRequest();
     var theUrl = "http://127.0.0.1:5000/removelot/" + name
     xmlHttp.open( "GET", theUrl , false);
@@ -35,7 +36,10 @@ function dropLot(name) {
     return xmlHttp.responseText;
 }
 
-function createDB(name, lat, lon) {
+function createDB(form) {
+    var name = form.dbName.value;
+    var lat =  form.latitude.value;
+    var lon =  form.longitude.value;
     var xmlHttp = new XMLHttpRequest();
     var theUrl = "http://127.0.0.1:5000/createdb/" + name + "/" + lat + "/" + lon
     xmlHttp.open( "GET", theUrl , false);
@@ -45,7 +49,8 @@ function createDB(name, lat, lon) {
     return xmlHttp.responseText;
 }
 
-function dropDB(name) {
+function dropDB(form) {
+    var name = form.select_rDB.value;
     var xmlHttp = new XMLHttpRequest();
     var theUrl = "http://127.0.0.1:5000/dropdb/" + name
     xmlHttp.open( "GET", theUrl , false);
