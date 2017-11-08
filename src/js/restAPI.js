@@ -1,10 +1,20 @@
+function getDB() 
+{
+    var xmlHttp = new XMLHttpRequest();
+    var theUrl = "http://localhost:5000/databases"
+    xmlHttp.open( "GET", theUrl , false); 
+    xmlHttp.open( "GET", theUrl , false);
+    xmlHttp.send(null);
+    var response = xmlHttp.responseText;
+    console.log(response);
+    return xmlHttp.responseText;
+}
 
 function getAllLots()
 {
     var xmlHttp = new XMLHttpRequest();
     var theUrl = "http://localhost:5000/lotNames"
     xmlHttp.open( "GET", theUrl , false); 
-    console.log(theUrl);
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;

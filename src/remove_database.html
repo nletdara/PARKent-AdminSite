@@ -8,6 +8,9 @@
 	</head>
 
 	<body>
+		<script>
+			getDB();
+		</script>
 		<a href="home.html"><h1><img src="../parkent_logo.jpg" alt="logo"></h1></a>
 		<div class="container">
 			<form name="RDForm">
@@ -15,10 +18,10 @@
 					<label for="select_rDB">Select a database to remove.</label>
 					<select class="form-control" id="select_rDB">
 						<option>Select</option>
-						<option>parking_data</option>
-						<option>lp_parking_data</option>
-                        <option>stark_parking_data</option>
-                        <option>ashtabula_parking_data</option>
+						<option value = "parking_data">parking_data</option>
+						<option value = "parkingTest">parkingTest</option>
+                        			<option value = "stark_parking_data">stark_parking_data</option>
+                        			<option value = "ashtabula_parking_data">ashtabula_parking_data</option>
 					</select>
 				</div>
 			</form>
