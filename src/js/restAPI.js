@@ -114,20 +114,10 @@ function dropdownFillDB(entries) {
 function verifyChange(response) {
 	console.log("TEST");
 	if (response == "{\"0\":\"true\"}") {
-		var status = document.getElementById("alert");
-		status.classList.add("alert");
-		status.classList.add("alert-success");	
-		status.setAttribute("role", "alert");
-		status.innerHTML = "SUCCESS... Refreshing";
-		setTimeout(refresh(), 3000000)
+		alert("SUCCESS");
 	}
 	else {
-		var status = document.getElementById("alert");
-		status.classList.add("alert");
-		status.classList.add("alert-danger");	
-		status.setAttribute("role", "alert");
-		status.innerHTML = "ERROR... Refreshing";
-		setTimeout(refresh(), 3000000)
+		alert("ERROR");
 	}
 
 }
