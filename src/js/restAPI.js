@@ -6,7 +6,6 @@ function getDB()
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
-    console.log(response);
     return xmlHttp.responseText;
 }
 
@@ -18,7 +17,6 @@ function getAllLots()
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
-    console.log(response);
     return xmlHttp.responseText;
 }
 
@@ -29,7 +27,6 @@ function getLots()
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
-    console.log(response);
     return xmlHttp.responseText;
 }
 
@@ -44,7 +41,6 @@ function addLot(form) {
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
-    console.log(response);
     return xmlHttp.responseText;
 }
 
@@ -55,7 +51,6 @@ function dropLot(form) {
     xmlHttp.open( "GET", theUrl , false);
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
-    console.log(response);
     return xmlHttp.responseText;
 }
 
@@ -85,35 +80,66 @@ function dropDB(form) {
 }
 
 function dropdownFillLot(entries) {
+    entries = JSON.stringify(entries);
     var select = document.getElementById("sel_rLot");
-    console.log(entries);
-    entries = entries.replace(/[\[\]"]+/g, '');
+    entries = entries.replace(/[\[\]\\"]+/g, '');
     entryArray = entries.split(", ");
     for(var i=0; i<entryArray.length; i++) {
-        console.log(entryArray[i]);
     }
-    // for(var i=0; i<entryArray.length; i++) {
-    //     var ent = entryArray[i];
-    //     var el = document.createElement("option");
-    //     el.textContent = ent;
-    //     el.value = ent;
-    //     select.appendChild(el);
-    // }
+    for(var i=0; i<entryArray.length; i++) {
+        var ent = entryArray[i];
+        var el = document.createElement("option");
+        el.textContent = ent;
+        el.value = ent;
+        select.appendChild(el);
+    }
 }
 
 function dropdownFillDB(entries) {
+    var myDatabases = JSON.stringify(entries);
     var select = document.getElementById("select_rDB");
-    console.log(entries);
-    entries = entries.replace(/[\[\]"]+/g, '');
-    entryArray = entries.split(", ");
+    myDatabases = myDatabases.replace(/[\[\]\\"]+/g, '');
+    entryArray = myDatabases.split(", ");
     for(var i=0; i<entryArray.length; i++) {
-        console.log(entryArray[i]);
     }
-    // for(var i=0; i<entryArray.length; i++) {
-    //     var ent = entryArray[i];
-    //     var el = document.createElement("option");
-    //     el.textContent = ent;
-    //     el.value = ent;
-    //     select.appendChild(el);
-    // }
+     for(var i=0; i<entryArray.length; i++) {
+         var ent = entryArray[i];
+         var el = document.createElement("option");
+         el.textContent = ent;
+         el.value = ent;
+         select.appendChild(el);
+    }
 }
+
+function verifyChange(response) {
+	console.log("TEST");
+	if (response == "{\"0\":\"true\"}") {
+		var status = document.getElementById("alert");
+		status.classList.add("alert");
+		status.classList.add("alert-success");	
+		status.setAttribute("role", "alert");
+		status.innerHTML = "SUCCESS... Refreshing";
+		setTimeout(refresh(), 3000000)
+	}
+	else {
+		var status = document.getElementById("alert");
+		status.classList.add("alert");
+		status.classList.add("alert-danger");	
+		status.setAttribute("role", "alert");
+		status.innerHTML = "ERROR... Refreshing";
+		setTimeout(refresh(), 3000000)
+	}
+
+}
+
+function refresh() {
+	window.location.reload();	
+}
+
+
+
+
+
+
+
+

@@ -16,7 +16,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="location_name">Parking Lot Name</label>
 					<div class="col-md-5">
-						<input id="location_name" name="location_name" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="location_name" name="location_name" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(ex. c-verder)</span>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="total_spaces">Total Lot Capacity</label>
 					<div class="col-md-5">
-						<input id="total_spaces" name="total_spaces" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="total_spaces" name="total_spaces" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(ex. 155)</span>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="latitude">Latitude</label>
 					<div class="col-md-5">
-						<input id="latitude" name="latitude" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="latitude" name="latitude" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(ex. 41.14896200) (max of 8 digits after decimal)</span>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="longitude">Longitude</label>
 					<div class="col-md-5">
-						<input id="longitude" name="longitude" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="longitude" name="longitude" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(ex. -81.34147600) (max of 8 digits after decimal)</span>
 					</div>
 				</div>
@@ -48,13 +48,16 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="url">URL</label>
 					<div class="col-md-5">
-						<input id="url" name="url" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="url" name="url" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(ex. https://streetsoncloud.com/parking/rest/occupancy/id/112)</span>
 					</div>
 				</div>
 
-				<button type="button" onclick="addLot(this.form);" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-plus"></span> Add Parking Lot</button>
-
+				<button type="button"  id = "ButtonPress" onclick="var response = addLot(this.form); verifyChange(response)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-plus"></span> Add Parking Lot</button>
+			</form>
+	<div id = "alert">
+		
+	</div>
 			</fieldset>
 		</form>
 	</body>

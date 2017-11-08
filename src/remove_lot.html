@@ -18,14 +18,16 @@
 				<div class="form-group">
 					<label for="sel_rLot">Select a parking lot to remove.</label>
 					<select class="form-control" id="sel_rLot">
-						<option>Select</option>
-						<option>c-verder</option>
-						<option>c-science</option>
-						<option>Test</option>
+						<option selected = "selected">Select</option>
+						<script>
+							dropdownFillLot(getAllLots());
+						</script>
 					</select>
 				</div>
-			<button type="button" onclick="dropLot(this.form)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Parking Lot</button>
+			<button type="button" id = "ButtonPress" onclick="var response = dropLot(this.form); verifyChange(response);" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Parking Lot</button>
 			</form>
+	<div id = "alert"></div>
+
 
 		</div>
 	</body>

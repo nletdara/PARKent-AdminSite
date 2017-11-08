@@ -9,7 +9,7 @@
 
 	<body>
 		<script>
-			getDB();
+			dropdownFillDB(getDB());
 		</script>
 		<a href="home.html"><h1><img src="../parkent_logo.jpg" alt="logo"></h1></a>
 		<div class="container">
@@ -17,16 +17,15 @@
 				<div class="form-group">
 					<label for="select_rDB">Select a database to remove.</label>
 					<select class="form-control" id="select_rDB" >
-						<option>Select</option>
-						<option value = "parking_data">parking_data</option>
-						<option value = "parkingTest">parkingTest</option>
-                        			<option value = "stark_parking_data">stark_parking_data</option>
-                        			<option value = "Ash_parking_data">ashtabula_parking_data</option>
+						<option selected = "selected">Select</option>
+						<script>
+							dropdownFillDB(getDB());
+						</script>
 					</select>
 				</div> 
-			<button type="button" onclick="dropDB(this.form)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Database</button>
+			<button type="button" id = "ButtonPress" onclick="var response = dropDB(this.form); verifyChange(response)"" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Database</button>
 			</form>
-		
+	<div id = "alert"></div>
 
 		</div>
 	</body>

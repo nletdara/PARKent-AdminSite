@@ -16,15 +16,15 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="dbName">Database Name</label>  
 					<div class="col-md-5">
-						<input id="dbName" name="dbName" type="text" placeholder="" class="form-control input-md">
-						<span class="help-block">(kent_main_parking_data)</span>  
+						<input autocomplete = "off" id="dbName" name="dbName" type="text" placeholder="" class="form-control input-md">
+						<span class="help-block">(kent_main_parking_data) also: must include "parking" in name</span>  
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="latitude">Latitude</label>  
 					<div class="col-md-5">
-						<input id="latitude" name="latitude" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="latitude" name="latitude" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(Kent Campus : 41.14896200) (max of 8 digits after decimal)</span>  
 					</div>
 				</div>
@@ -32,12 +32,14 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="longitude">Longitude</label>  
 					<div class="col-md-5">
-						<input id="longitude" name="longitude" type="text" placeholder="" class="form-control input-md">
+						<input autocomplete = "off" id="longitude" name="longitude" type="text" placeholder="" class="form-control input-md">
 						<span class="help-block">(Kent Campus : -81.34147600) (max of 8 digits after decimal)</span>  
 					</div>
 				</div>
 
-				<button type="button" onclick="createDB(this.form)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Create Database</button>
+				<button type="button" id = "ButtonPress" onclick="var response = createDB(this.form); verifyChange(response);" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Create Database</button>
+
+			<div id = "alert"></div>
 
 			</fieldset>
 		</form>
