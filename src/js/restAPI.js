@@ -2,13 +2,10 @@
 function getAllLots()
 {
     var xmlHttp = new XMLHttpRequest();
-<<<<<<< HEAD
     var theUrl = "http://localhost:5000/lotNames"
     xmlHttp.open( "GET", theUrl , false); 
-=======
     console.log(theUrl);
     xmlHttp.open( "GET", theUrl , false);
->>>>>>> 35d6038c9d5fa144d1e13ff6cff5cc2250ee0c4b
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
     console.log(response);
