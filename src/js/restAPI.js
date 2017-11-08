@@ -83,3 +83,37 @@ function dropDB(form) {
     console.log(response);
     return xmlHttp.responseText;
 }
+
+function dropdownFillLot(entries) {
+    var select = document.getElementById("sel_rLot");
+    console.log(entries);
+    entries = entries.replace(/[\[\]"]+/g, '');
+    entryArray = entries.split(", ");
+    for(var i=0; i<entryArray.length; i++) {
+        console.log(entryArray[i]);
+    }
+    // for(var i=0; i<entryArray.length; i++) {
+    //     var ent = entryArray[i];
+    //     var el = document.createElement("option");
+    //     el.textContent = ent;
+    //     el.value = ent;
+    //     select.appendChild(el);
+    // }
+}
+
+function dropdownFillDB(entries) {
+    var select = document.getElementById("select_rDB");
+    console.log(entries);
+    entries = entries.replace(/[\[\]"]+/g, '');
+    entryArray = entries.split(", ");
+    for(var i=0; i<entryArray.length; i++) {
+        console.log(entryArray[i]);
+    }
+    // for(var i=0; i<entryArray.length; i++) {
+    //     var ent = entryArray[i];
+    //     var el = document.createElement("option");
+    //     el.textContent = ent;
+    //     el.value = ent;
+    //     select.appendChild(el);
+    // }
+}
