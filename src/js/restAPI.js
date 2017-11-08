@@ -1,8 +1,8 @@
 
-function getAllLots(theUrl)
+function getAllLots()
 {
     var xmlHttp = new XMLHttpRequest();
-    console.log(theUrl);
+    var theUrl = "http://localhost:5000/lotNames"
     xmlHttp.open( "GET", theUrl , false); 
     xmlHttp.send(null);
     var response = xmlHttp.responseText;
