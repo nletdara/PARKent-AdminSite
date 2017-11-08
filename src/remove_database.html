@@ -16,17 +16,17 @@
 			<form name="RDForm">
 				<div class="form-group">
 					<label for="select_rDB">Select a database to remove.</label>
-					<select class="form-control" id="select_rDB">
+					<select class="form-control" id="select_rDB" >
 						<option>Select</option>
 						<option value = "parking_data">parking_data</option>
 						<option value = "parkingTest">parkingTest</option>
                         			<option value = "stark_parking_data">stark_parking_data</option>
-                        			<option value = "ashtabula_parking_data">ashtabula_parking_data</option>
+                        			<option value = "Ash_parking_data">ashtabula_parking_data</option>
 					</select>
-				</div>
+				</div> 
+			<button type="button" onclick="dropDB(this.form)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Database</button>
 			</form>
 		
-			<button type="buton" onclick="dropDB(this.form)" class="btn btn-lg btn-primary center-block"><span class="glyphicon glyphicon-remove"></span> Remove Database</button>
 
 		</div>
 	</body>

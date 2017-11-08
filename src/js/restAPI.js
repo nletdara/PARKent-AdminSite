@@ -73,6 +73,7 @@ function createDB(form) {
 }
 
 function dropDB(form) {
+    console.log(form);
     var name = form.select_rDB.value;
     var xmlHttp = new XMLHttpRequest();
     var theUrl = "http://127.0.0.1:5000/dropdb/" + name
